@@ -89,5 +89,8 @@ Route::post('/reset-password', function (Request $request) {
 
 Route::group(['prefix' => 'app/u/', 'middleware' => 'auth', 'verified'], function() {
     Route::get('dashboard', [LoginController::class, 'dashboard'])->name('retailer.dashboard');
+    Route::get('metros/{slug}', [LoginController::class, 'dashboard_metro'])->name('retailer.dashboard.metro');
+    Route::get('products/{slug}/{metro_slug}', [LoginController::class, 'dashboard_product'])->name('retailer.dashboard.product');
+    Route::get('p/{slug}/{metro_slug}/{business_slug}', [LoginController::class, 'dashboard_product_info'])->name('retailer.product.info');
 
 });

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Metro;
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
@@ -99,6 +101,33 @@ class LoginController extends Controller
 
     public function dashboard()
     {
-        return view('auth.dashboard', ['title' => 'Dashboard']);
+        $business = User::where('user_type', '=', 'business')->get();
+        return view('auth.dashboard', ['title' => 'Dashboard', 'business' => $business]);
+    }
+
+    public function dashboard_metro($slug)
+    {
+        $business = User::whereSlug($slug)->first();
+        $metros = Metro::where('user_id', '=', Auth::user()->id)->where('business_id', '=', $business->id)->get();
+
+        return view('auth.dashboard_metro', ['title' => 'Dashboard Metros', 'business' => $business, 'metros' => $metros]);
+    }
+
+    public function dashboard_product($slug, $metro_slug)
+    {
+        $business = User::whereSlug($slug)->first();
+        $metro = Metro::whereSlug($metro_slug)->first();
+        $products = Product::whereMetroId($metro->id)->where('business_id', '=', $business->id)->get();
+
+        return view('auth.dashboard_product', ['title' => 'Dashboard Products', 'business' => $business, 'metro' => $metro, 'products' => $products]);
+    }
+
+    public function dashboard_product_info($product_slug, $metro_slug, $business_slug)
+    {
+        $business = User::whereSlug($business_slug)->first();
+        $metro = Metro::whereSlug($metro_slug)->first();
+        $product = Product::whereSlug($product_slug)->first();
+
+        return view('auth.product_info', ['title' => 'Product Info', 'business' => $business, 'metro' => $metro, 'product' => $product]);
     }
 }
