@@ -37,7 +37,7 @@ class LoginController extends Controller
             } elseif (Auth::user()->user_type == 'retailer') {
                 return redirect()->route('retailer.dashboard');
             } else {
-                return redirect()->route('retailer.dashboard');
+                return redirect()->route('business.dashboard');
 
 
             }

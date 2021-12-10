@@ -94,3 +94,14 @@ Route::group(['prefix' => 'app/u/', 'middleware' => 'auth', 'verified'], functio
     Route::get('p/{slug}/{metro_slug}/{business_slug}', [LoginController::class, 'dashboard_product_info'])->name('retailer.product.info');
 
 });
+
+
+
+//User B
+Route::group(['prefix' => 'app/b/', 'middleware' => 'auth', 'verified'], function() {
+    Route::get('dashboard', [\App\Http\Controllers\BusinessController::class, 'dashboard'])->name('business.dashboard');
+    Route::get('metros/{slug}', [\App\Http\Controllers\BusinessController::class, 'dashboard_metro'])->name('business.dashboard.metro');
+    Route::get('p/{slug}/{metro_slug}', [\App\Http\Controllers\BusinessController::class, 'dashboard_product_info'])->name('business.product.info');
+
+});
+
