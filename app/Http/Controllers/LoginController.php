@@ -15,7 +15,12 @@ class LoginController extends Controller
 {
     public function login() {
         if(Auth::check()){
-            return redirect()->route('retailer.dashboard');
+            if(Auth::user()->user_type == 'business') {
+                return redirect()->route('business.dashboard');
+            } else {
+                return redirect()->route('retailer.dashboard');
+            }
+
         }
         return view('auth.login', ["title" => "Login"]);
     }
