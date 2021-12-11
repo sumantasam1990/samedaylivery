@@ -17,7 +17,7 @@
                     <h4>{{ $business->name }}</h4>
                 </div>
                 <div class="col-6">
-                    <a class="btn btn-success btn-sm" href="">Place Order</a>
+                    <a class="btn btn-success btn-sm" href="{{ route('business.place.order', [$metro->slug, $product->slug]) }}">Place Order</a>
                 </div>
             </div>
 

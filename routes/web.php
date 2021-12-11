@@ -102,6 +102,9 @@ Route::group(['prefix' => 'app/b/', 'middleware' => 'auth', 'verified'], functio
     Route::get('dashboard', [\App\Http\Controllers\BusinessController::class, 'dashboard'])->name('business.dashboard');
     Route::get('metros/{slug}', [\App\Http\Controllers\BusinessController::class, 'dashboard_metro'])->name('business.dashboard.metro');
     Route::get('p/{slug}/{metro_slug}', [\App\Http\Controllers\BusinessController::class, 'dashboard_product_info'])->name('business.product.info');
+    Route::get('place-order/{metro_slug}/{product_slug}', [\App\Http\Controllers\BusinessController::class, 'place_order'])->name('business.place.order');
+    Route::post('placeorder', [\App\Http\Controllers\BusinessController::class, 'place_order_post'])->name('business.place.order.post');
+
 
 });
 
