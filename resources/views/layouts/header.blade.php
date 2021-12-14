@@ -6,7 +6,7 @@
 
         <link rel="icon" href="{{ asset('images/fav.png') }}">
 
-        <title>Scorng - {{ $title }}</title>
+        <title>{{ $title }} - Samedaylivery</title>
 
         <link rel="stylesheet" href={{ asset('css/app.css') }}>
 
@@ -46,7 +46,7 @@
 {{--                            <a class="nav-link" href="{{ route('') }}">Message Us</a>--}}
 {{--                        </li>--}}
                         <li class="nav-item">
-                            <a class="nav-link" href="/faq">FAQ</a>
+                            <a class="nav-link" href="{{ route('faq') }}">FAQ</a>
                         </li>
                         @if(auth()->user()->user_type == 'business')
                             <li class="nav-item">
@@ -72,7 +72,7 @@
                             <a class="nav-link" href="{{ route('pricing') }}">Pricing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/faq">FAQ</a>
+                            <a class="nav-link" href="{{ route('faq') }}">FAQ</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('about') }}">About us</a>
@@ -97,11 +97,11 @@
                         </ul>
                     </li>
                     @else
-                        <li class="nav-item" style="margin-right: 5px;">
-                            <a class="btn btn-dark btn-sm" href="{{ route('login') }}">Login</a>
-                        </li>
+{{--                        <li class="nav-item" style="margin-right: 5px;">--}}
+{{--                            <a class="btn btn-dark btn-sm" href="{{ route('login') }}">Login</a>--}}
+{{--                        </li>--}}
                         <li class="nav-item">
-                            <a class="btn btn-dark btn-sm" href="{{ route('register-user') }}">Sign Up</a>
+                            <a class="btn btn-outline-dark btn-sm" href="{{ route('subscribe') }}">Sign Up</a>
                         </li>
                   @endif
 

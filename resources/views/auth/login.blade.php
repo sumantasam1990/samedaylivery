@@ -37,7 +37,7 @@
                         <div class="d-grid mx-auto">
                             <button type="submit" class="btn btn-dark btn-block">Log in</button>
                             <a class="btn text-dark text-decoration-underline  p-4" href="/forgot-password">Forgot Password?</a>
-                            <a class="btn mt-3 fw-bold" href="/signup">Don't Have An Account? Create Your Free Account</a>
+                            <a class="btn mt-3 fw-bold" href="{{ route('subscribe') }}">Don't Have An Account? <br>Subscribe Us To Get An Invitation Link To Your Email.</a>
                         </div>
                     </form>
                 </div>

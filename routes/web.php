@@ -16,6 +16,12 @@ Route::get('/benefits', [\App\Http\Controllers\PagesController::class, 'benefits
 Route::get('/about-us', [\App\Http\Controllers\PagesController::class, 'about'])->name('about');
 Route::get('/pricing', [\App\Http\Controllers\PagesController::class, 'pricing'])->name('pricing');
 Route::get('/terms', [\App\Http\Controllers\PagesController::class, 'terms'])->name('terms');
+Route::get('/faq', [\App\Http\Controllers\PagesController::class, 'faq'])->name('faq');
+Route::get('/faqs/{id}', [\App\Http\Controllers\PagesController::class, 'faqs_info'])->name('faq-info');
+Route::get('/contact', [\App\Http\Controllers\PagesController::class, 'contact'])->name('contact');
+Route::post('contact/us', [\App\Http\Controllers\PagesController::class, 'sendemailToContact'])->name('contact.us');
+Route::get('/subscribe', [\App\Http\Controllers\LoginController::class, 'registration_lead'])->name('subscribe');
+Route::post('subscribe/post', [\App\Http\Controllers\LoginController::class, 'customRegistration_lead'])->name('subscribe.post');
 
 
 

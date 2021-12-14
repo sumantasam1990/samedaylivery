@@ -7,7 +7,7 @@
             <div class="text-center mt-4">
                 <h1 class="display-5 fw-bolder">Offer your customers guaranteed 4-hour delivery and same-day delivery in up to 300 metro areas even on weekends and all holidays.</h1>
                 <p class="fw-bold mt-3 fs-6 text-center subheading">Consumers absolutely love and value same day delivery and delivery in hours. Stay ahead of your competition and grow your customer base.</p>
-                <a class="btn btn-info btn-lg mt-4" href="{{ route('register-user') }}">Sign Up Today</a>
+                <a class="btn btn-info btn-lg mt-4" href="{{ route('subscribe') }}">Sign Up Today</a>
                 <p class="mt-3">Week-to- Week. No long term commitment.</p>
             </div>
         </div>
@@ -93,7 +93,7 @@
                     <p class="m-2 fw-bold fs-6 mb-4">Order delivered to customer email alerts.</p>
                     <p class="m-2 fw-bold fs-6 mb-4">Interviewed, verified and background checked delivery drivers and associates.</p>
                 </div>
-                <a class="btn btn-dark mt-4" href="{{ route('register-user') }}">Sign Up</a>
+                <a class="btn btn-dark mt-4" href="{{ route('subscribe') }}">Sign Up</a>
             </div>
         </div>
 
@@ -114,7 +114,7 @@
                     <p class="m-2 fw-bold fs-6 mb-4">Interviewed, verified and background checked delivery drivers and associates.</p>
                 </div>
 
-                <a class="btn btn-dark mt-4" href="{{ route('register-user') }}">Sign Up</a>
+                <a class="btn btn-dark mt-4" href="{{ route('subscribe') }}">Sign Up</a>
 
             </div>
 

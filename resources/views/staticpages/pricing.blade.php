@@ -24,7 +24,7 @@
                             <p class="m-2 fw-bold fs-6 mb-4">Order delivered to customer email alerts.</p>
                             <p class="m-2 fw-bold fs-6 mb-4">Interviewed, verified and background checked delivery drivers and associates.</p>
                         </div>
-                        <a class="btn btn-dark mt-4" href="{{ route('register-user') }}">Sign Up</a>
+                        <a class="btn btn-dark mt-4" href="{{ route('subscribe') }}">Sign Up</a>
                     </div>
                 </div>
 
@@ -45,7 +45,7 @@
                             <p class="m-2 fw-bold fs-6 mb-4">Interviewed, verified and background checked delivery drivers and associates.</p>
                         </div>
 
-                        <a class="btn btn-dark mt-4" href="{{ route('register-user') }}">Sign Up</a>
+                        <a class="btn btn-dark mt-4" href="{{ route('subscribe') }}">Sign Up</a>
 
                     </div>
 

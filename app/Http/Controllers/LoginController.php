@@ -6,6 +6,7 @@ use App\Models\Inventory;
 use App\Models\Metro;
 use App\Models\Order;
 use App\Models\Product;
+use App\Models\Subscriber;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
@@ -24,7 +25,9 @@ class LoginController extends Controller
             }
 
         }
-        return view('auth.login', ["title" => "Login"]);
+
+        return abort('404');
+        //return view('auth.login', ["title" => "Login"]);
     }
 
     public function authenticate(Request $request)
@@ -57,13 +60,45 @@ class LoginController extends Controller
         ]);
     }
 
+    public function registration_lead()
+    {
+        if(Auth::check()){
+            return redirect('/dashboard');
+        }
+
+        return view('auth.lead', ["title" => "Register With Us"]);
+    }
+
+
+    public function customRegistration_lead(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:subscribers',
+            'b_name' => 'required',
+            'phone' => 'required'
+
+        ]);
+
+        $subscriber = new Subscriber;
+
+        $subscriber->name = $request->name;
+        $subscriber->business = $request->b_name;
+        $subscriber->email = $request->email;
+        $subscriber->phone = $request->phone;
+        $subscriber->save();
+
+        return back()->with('msg', '<h4>Thank you for subscribe us. We will send you an invitation link to your email.</h4>');
+    }
+
     public function registration()
     {
         if(Auth::check()){
             return redirect('/dashboard');
         }
 
-        return view('auth.register', ["title" => "Create an account"]);
+        return abort('404');
+        //return view('auth.register', ["title" => "Create an account"]);
     }
 
 
@@ -142,4 +177,6 @@ class LoginController extends Controller
 
         return view('auth.product_info', ['title' => 'Product Info', 'business' => $business, 'metro' => $metro, 'product' => $product, 'orders_past' => $orders_past, 'inventory' => $inventory, 'orders_current' => $orders_current]);
     }
+
+
 }
