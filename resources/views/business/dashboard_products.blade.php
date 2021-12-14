@@ -16,7 +16,7 @@
                     <h4>{{ auth()->user()->name }}</h4>
                 </div>
                 <div class="col-6">
-                    <a class="btn btn-success btn-sm" href="">Add Product</a>
+                    <a class="btn btn-success btn-sm" href="{{ route('business.add.product', [$metro->slug]) }}">Add Product</a>
                 </div>
             </div>
 

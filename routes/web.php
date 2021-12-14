@@ -85,13 +85,19 @@ Route::post('/reset-password', function (Request $request) {
 })->middleware('guest')->name('password.update');
 
 
-// General Routes
+// User A Routes
 
 Route::group(['prefix' => 'app/u/', 'middleware' => 'auth', 'verified'], function() {
     Route::get('dashboard', [LoginController::class, 'dashboard'])->name('retailer.dashboard');
     Route::get('metros/{slug}', [LoginController::class, 'dashboard_metro'])->name('retailer.dashboard.metro');
     Route::get('products/{slug}/{metro_slug}', [LoginController::class, 'dashboard_product'])->name('retailer.dashboard.product');
     Route::get('p/{slug}/{metro_slug}/{business_slug}', [LoginController::class, 'dashboard_product_info'])->name('retailer.product.info');
+
+    Route::get('inventory/{metro_slug}/{prod_slug}', [\App\Http\Controllers\ProductController::class, 'retailer_inventory'])->name('retailer.inventory');
+    Route::get('orders/past/{prod_slug}', [\App\Http\Controllers\ProductController::class, 'retailer_past_orders'])->name('retailer.order.past');
+    Route::get('orders/current/{prod_slug}', [\App\Http\Controllers\ProductController::class, 'retailer_current_orders'])->name('retailer.order.current');
+
+    Route::post('delivered', [\App\Http\Controllers\ProductController::class, 'retailer_order_delivered'])->name('retailer.order.delivered');
 
 });
 
@@ -104,6 +110,14 @@ Route::group(['prefix' => 'app/b/', 'middleware' => 'auth', 'verified'], functio
     Route::get('p/{slug}/{metro_slug}', [\App\Http\Controllers\BusinessController::class, 'dashboard_product_info'])->name('business.product.info');
     Route::get('place-order/{metro_slug}/{product_slug}', [\App\Http\Controllers\BusinessController::class, 'place_order'])->name('business.place.order');
     Route::post('placeorder', [\App\Http\Controllers\BusinessController::class, 'place_order_post'])->name('business.place.order.post');
+    Route::get('add-product/{metro_slug}', [\App\Http\Controllers\ProductController::class, 'add_product'])->name('business.add.product');
+    Route::post('product', [\App\Http\Controllers\ProductController::class, 'product_insert'])->name('business.add.product.post');
+    Route::get('orders/current/{prod_slug}', [\App\Http\Controllers\ProductController::class, 'current_orders'])->name('business.order.current');
+    Route::get('orders/past/{prod_slug}', [\App\Http\Controllers\ProductController::class, 'past_orders'])->name('business.order.past');
+
+    Route::get('send-inventory/{metro_slug}/{prod_slug}', [\App\Http\Controllers\ProductController::class, 'send_inventory'])->name('business.send.inventory');
+    Route::post('inventory-post', [\App\Http\Controllers\ProductController::class, 'send_inventory_insert'])->name('business.send.inventory.post');
+    Route::get('inventory/{metro_slug}/{prod_slug}', [\App\Http\Controllers\ProductController::class, 'inventory'])->name('business.inventory');
 
 
 });

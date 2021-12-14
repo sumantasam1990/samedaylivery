@@ -24,15 +24,15 @@
             <div class="row mt-4">
 
                 <div class="col-6">
-                    <p class="fw-bold fs-4 text-success">Inventory (4)</p>
+                    <p class="fw-bold fs-4"><a class="text-success" href="{{ route('business.inventory', [$metro->slug, $product->slug]) }}">Inventory ({{ count($inventory) }})</a> </p>
 
-                    <p class="fw-bold fs-4"><a class="text-success" href="">Current Orders (5)</a></p>
+                    <p class="fw-bold fs-4"><a class="text-success" href="{{ route('business.order.current', [$product->slug]) }}">Current Orders ({{ count($orders_current) }})</a></p>
 
-                    <p class="fw-bold fs-4"><a class="text-danger" href="">Past Orders (10)</a></p>
+                    <p class="fw-bold fs-4"><a class="text-danger" href="{{ route('business.order.past', [$product->slug]) }}">Past Orders ({{ count($orders_past) }})</a></p>
 
                 </div>
                 <div class="col-6">
-                    <p><a class="btn btn-success btn-sm " href="">Send Inventory</a></p>
+                    <p><a class="btn btn-success btn-sm " href="{{ route('business.send.inventory', [$metro->slug, $product->slug]) }}">Send Inventory</a></p>
 
                 </div>
             </div>

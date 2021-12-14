@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Customer;
+use App\Models\Inventory;
 use App\Models\Metro;
 use App\Models\Order;
 use App\Models\Product;
@@ -38,7 +39,11 @@ class BusinessController extends Controller
         $metro = Metro::whereSlug($metro_slug)->first();
         $product = Product::whereSlug($product_slug)->first();
 
-        return view('business.product_info', ['title' => 'Product Info', 'business' => $business, 'metro' => $metro, 'product' => $product]);
+        $orders_current = Order::whereProductId($product->id)->where('business_id', '=', Auth::user()->id)->where('status', '=', 0)->get();
+        $orders_past = Order::whereProductId($product->id)->where('business_id', '=', Auth::user()->id)->where('status', '=', 1)->get();
+        $inventory = Inventory::whereProductId($product->id)->where('business_id', '=', Auth::user()->id)->where('user_id', '=', 1)->get();
+
+        return view('business.product_info', ['title' => 'Product Info', 'business' => $business, 'metro' => $metro, 'product' => $product, 'orders_current' => $orders_current, 'orders_past' => $orders_past, 'inventory' => $inventory]);
     }
 
     public function place_order($metro_slug, $prod_slug)
@@ -96,6 +101,8 @@ class BusinessController extends Controller
 
 
     }
+
+
 
 
 }

@@ -106,6 +106,8 @@
 
 <script src="{{ asset('js/bootstrap.js') }}"></script>
 
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+
 <script>
     $(function () {
         $('[data-bs-toggle="popover"]').popover({ trigger: "hover", html: true })

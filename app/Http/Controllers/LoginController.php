@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Inventory;
 use App\Models\Metro;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
@@ -134,6 +136,10 @@ class LoginController extends Controller
         $metro = Metro::whereSlug($metro_slug)->first();
         $product = Product::whereSlug($product_slug)->first();
 
-        return view('auth.product_info', ['title' => 'Product Info', 'business' => $business, 'metro' => $metro, 'product' => $product]);
+        $orders_current = Order::whereProductId($product->id)->where('status', '=', 0)->get();
+        $orders_past = Order::whereProductId($product->id)->where('status', '=', 1)->get();
+        $inventory = Inventory::whereProductId($product->id)->where('user_id', '=', Auth::user()->id)->get();
+
+        return view('auth.product_info', ['title' => 'Product Info', 'business' => $business, 'metro' => $metro, 'product' => $product, 'orders_past' => $orders_past, 'inventory' => $inventory, 'orders_current' => $orders_current]);
     }
 }
