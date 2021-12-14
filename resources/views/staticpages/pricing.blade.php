@@ -9,7 +9,7 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-5 mb-3">
                     <div class="box-black text-center">
-                        <h2 class="fw-bold">Same-day<br>
+                        <h2 class="fw-bold fs-2">Same-day
                             GUARANTEED delivery</h2>
                         <h4 class="display-4 fw-bold">$250/wk</h4>
                         <p class="fw-bold">Per Metro</p>
@@ -30,7 +30,7 @@
 
                 <div class="col-md-5 mb-3">
                     <div class="box-black text-center">
-                        <h2 class="fw-bold">4-hour GUARANTEED <br> delivery</h2>
+                        <h2 class="fw-bold fs-2">4-hour GUARANTEED delivery</h2>
                         <h4 class="display-4 fw-bold">$500/wk</h4>
                         <p class="fw-bold">Per Metro</p>
                         <div class="m-0">

@@ -70,26 +70,23 @@
 
 {{--mobile message--}}
 
-<div class="modal fade" id="mob_message" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-     aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-headerr">
-                {{--                <h5 class="display-6 text-center heading_txt" id="edit_score_heading">Create A Score</h5>--}}
-                <button style="float: right; margin: 10px;" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center">
-                <h4 class="fw-bold fs-4">PLEASE USE SCORNG ON DESKTOP</h4>
+{{--<div class="modal fade" id="mob_message" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"--}}
+{{--     aria-labelledby="staticBackdropLabel" aria-hidden="true">--}}
+{{--    <div class="modal-dialog modal-dialog-centered">--}}
+{{--        <div class="modal-content">--}}
+{{--            <div class="modal-headerr">--}}
+{{--                --}}{{--                <h5 class="display-6 text-center heading_txt" id="edit_score_heading">Create A Score</h5>--}}
+{{--                <button style="float: right; margin: 10px;" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--}}
+{{--            </div>--}}
+{{--            <div class="modal-body text-center">--}}
+{{--                <h4 class="fw-bold fs-4">PLEASE USE Samedaylivery ON DESKTOP</h4>--}}
 
-                <p class="fs-6 mt-4">We HIGHLY recommend using Scorng on desktop to get the best possible experience of all of our features!</p>
+{{--                <p class="fs-6 mt-4">We HIGHLY recommend using Scorng on desktop to get the best possible experience of all of our features!</p>--}}
 
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
 
 
 

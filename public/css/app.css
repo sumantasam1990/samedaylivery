@@ -11751,4 +11751,11 @@ footer ul li a {
   .navbar-nav {
     background: #ffffff;
   }
+
+  .box-black {
+    border: 8px solid #414141;
+    padding: 50px 0px;
+    font-size: 22px;
+    min-height: 1008px;
+  }
 }
