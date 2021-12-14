@@ -70,7 +70,7 @@
 <div class="container mt-6 ">
     <div class="row">
         <div class="col-12 text-center">
-            <h4 class="fw-bold display-4">Two Simple Price</h4>
+            <h4 class="fw-bold display-4">Two Simple Prices</h4>
             <p>Week-to-Week. No long term commitment. </p>
         </div>
     </div>

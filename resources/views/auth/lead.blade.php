@@ -8,8 +8,8 @@
 
         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 mx-auto">
             <div class="">
-                <h2 class="display-6 text-center heading_txt fw-bolder">Subscribe To Samedaylivery</h2>
-                <h6 class="text-center fs-5 fw-bold">If you are a business, Subscribe us to get an invitation link to your email.</h6>
+                <h2 class="display-6 text-center heading_txt fw-bolder">Sign Up</h2>
+                <h6 class="text-center fs-5 fw-bold">We will contact you with the next steps.</h6>
 
                 <div class="box">
                     <form action="{{ route('subscribe.post') }}" method="POST">
