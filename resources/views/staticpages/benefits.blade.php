@@ -41,7 +41,7 @@
                 <div class="col-md-12 text-center mt-6">
                     <div class="circle-number">6</div>
                     <h4 class="mt-3 display-6 fw-bold">Climate Controlled & Secured Storage Units</h4>
-                    <p>All storage units that the inventory is held in is secure and climate controlled so you can have peace of mind that your products are safe and will be kept in the best environment to keep q</p>
+                    <p>All storage units that the inventory is held in is secure and climate controlled so you can have peace of mind that your products are safe and will be kept in the best environment.</p>
                 </div>
 
 

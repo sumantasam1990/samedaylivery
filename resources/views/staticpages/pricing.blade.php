@@ -3,13 +3,13 @@
 <div class="container mt-4 mb-4">
     <div class="row">
         <div class="col-12 text-center">
-            <h1 class="display-4 fw-bold">Two Simple Price</h1>
+            <h1 class="display-4 fw-bold">Two Simple Prices</h1>
             <h5>Week-to-Week. No long term commitment.</h5>
             <div class="row mt-4">
                 <div class="col-md-1"></div>
                 <div class="col-md-5 mb-3">
                     <div class="box-black text-center">
-                        <h2 class="fw-bold fs-2">Same-day
+                        <h2 class="fw-bold p-4">Same-day
                             GUARANTEED delivery</h2>
                         <h4 class="display-4 fw-bold">$250/wk</h4>
                         <p class="fw-bold">Per Metro</p>
@@ -30,7 +30,7 @@
 
                 <div class="col-md-5 mb-3">
                     <div class="box-black text-center">
-                        <h2 class="fw-bold fs-2">4-hour GUARANTEED delivery</h2>
+                        <h2 class="fw-bold p-4">4-hour GUARANTEED delivery</h2>
                         <h4 class="display-4 fw-bold">$500/wk</h4>
                         <p class="fw-bold">Per Metro</p>
                         <div class="m-0">
