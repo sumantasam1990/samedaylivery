@@ -1,75 +1,70 @@
-{{--<div class="container-fluid footer mt-6">--}}
-{{--    <footer class="container text-left mt-6">--}}
-{{--        <div class="row">--}}
-{{--            <div class="col-md-1 col-12"></div>--}}
-{{--            <div class="col-md-3 col-12 mb-4">--}}
-{{--                <img src="{{ asset('images/logo.webp') }}">--}}
-{{--            </div>--}}
-{{--            <div class="col-md-2 col-6">--}}
-{{--                <p class="fw-bold mb-0">Scorng</p>--}}
-{{--                <ul>--}}
-{{--                    <li>--}}
-{{--                        <a href="/pricing">Pricing</a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a href="/signup">Sign Up</a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a href="/login">Login</a>--}}
-{{--                    </li>--}}
-{{--                </ul>--}}
-{{--            </div>--}}
-{{--            <div class="col-md-2 col-6">--}}
-{{--                <p class="fw-bold mb-0">Support</p>--}}
-{{--                <ul>--}}
-{{--                    <li>--}}
-{{--                        <a href="/about">About Us</a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a href="/howitworks">How It Works</a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a href="/features">Features</a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a href="/faq">FAQs</a>--}}
-{{--                    </li>--}}
-{{--                </ul>--}}
-{{--            </div>--}}
-{{--            <div class="col-md-2 col-6">--}}
-{{--                <p class="fw-bold mb-0 mt-4 mt-md-0">Get In Touch</p>--}}
-{{--                <ul>--}}
-{{--                    <li>--}}
-{{--                        <a href="/contact">Message Us</a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a href="">Facebook</a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a href="">Twitter</a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a href="">Instagram</a>--}}
-{{--                    </li>--}}
-{{--                </ul>--}}
-{{--            </div>--}}
-{{--            <div class="col-md-2 col-6">--}}
-{{--                <p class="fw-bold mb-0 mt-4 mt-md-0">Legal</p>--}}
-{{--                <ul>--}}
-{{--                    <li>--}}
-{{--                        <a href="/legal">Legal Stuff</a>--}}
-{{--                    </li>--}}
+<div class="container-fluid footer">
+    <footer class="container text-left mt-6">
+        <div class="row">
+            <div class="col-md-1 col-12"></div>
+            <div class="col-md-3 col-12 mb-4">
+                <img style="width: 200px;" src="{{ asset('images/LOGOw.webp') }}">
+            </div>
+            <div class="col-md-2 col-6">
+                <p class="fw-bold mb-0">Samedaylivery</p>
+                <ul>
+                    <li>
+                        <a href="{{ route('pricing') }}">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('register-user') }}">Sign Up</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('login') }}">Login</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-6">
+                <p class="fw-bold mb-0">Support</p>
+                <ul>
+                    <li>
+                        <a href="{{ route('about') }}">About Us</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('howitworks') }}">How It Works</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('benefits') }}">Benefits</a>
+                    </li>
+                    <li>
+                        <a href="/faq">FAQs</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-6">
+                <p class="fw-bold mb-0 mt-4 mt-md-0">Get In Touch</p>
+                <ul>
+                    <li>
+                        <a href="/contact">Message Us</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-md-2 col-6">
+                <p class="fw-bold mb-0 mt-4 mt-md-0">Legal</p>
+                <ul>
+                    <li>
+                        <a href="/legal">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('terms') }}">Terms</a>
+                    </li>
 
 
-{{--                    <li>--}}
-{{--                        <a style="cursor: inherit" href="javascript:void(0)" nofollow>&copy; 2021</a>--}}
-{{--                    </li>--}}
-{{--                </ul>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </footer>--}}
+                    <li>
+                        <a style="cursor: inherit;" class="text-dark" href="javascript:void(0)" nofollow>&copy; 2021</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
-{{--</div>--}}
+</div>
 
 
 

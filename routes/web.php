@@ -8,6 +8,17 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Auth\Events\PasswordReset;
 
+// Static pages
+
+Route::get('/', [\App\Http\Controllers\PagesController::class, 'home'])->name('home');
+Route::get('/how-it-works', [\App\Http\Controllers\PagesController::class, 'how_it_works'])->name('howitworks');
+Route::get('/benefits', [\App\Http\Controllers\PagesController::class, 'benefits'])->name('benefits');
+Route::get('/about-us', [\App\Http\Controllers\PagesController::class, 'about'])->name('about');
+Route::get('/pricing', [\App\Http\Controllers\PagesController::class, 'pricing'])->name('pricing');
+Route::get('/terms', [\App\Http\Controllers\PagesController::class, 'terms'])->name('terms');
+
+
+
 
 // authentications
 Route::get('login', [LoginController::class, 'login'])->name('login');

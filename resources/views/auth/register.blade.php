@@ -8,8 +8,8 @@
 
         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 mx-auto">
             <div class="">
-            <h2 class="display-4 text-center heading_txt">Sign Up For Scorng</h2>
-                <h6 class="text-center fs-5 fw-normal">7 Day Free Trial, No Credit Card Required.</h6>
+            <h2 class="display-6 text-center heading_txt fw-bolder">Sign Up For Samedaylivery</h2>
+                <h6 class="text-center fs-5 fw-bold">If you are business, Create your free account.</h6>
 
                 <div class="box">
                     <form action="{{ route('register.custom') }}" method="POST">

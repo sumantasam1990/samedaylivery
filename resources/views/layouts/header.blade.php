@@ -37,11 +37,14 @@
                     @if (Auth::check())
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/howitworks">How It Works</a>
+                            <a class="nav-link" href="{{ route('howitworks') }}">How It Works</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/features">Features</a>
+                            <a class="nav-link" href="{{ route('benefits') }}">Benefits</a>
                         </li>
+{{--                        <li class="nav-item">--}}
+{{--                            <a class="nav-link" href="{{ route('') }}">Message Us</a>--}}
+{{--                        </li>--}}
                         <li class="nav-item">
                             <a class="nav-link" href="/faq">FAQ</a>
                         </li>
@@ -57,19 +60,22 @@
 
                     @else
                         <li class="nav-item">
-                            <a class="nav-link" href="/howitworks">How It Works</a>
+                            <a class="nav-link" href="{{ route('howitworks') }}">How It Works</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/features">Features</a>
+                            <a class="nav-link" href="{{ route('benefits') }}">Benefits</a>
                         </li>
+{{--                        <li class="nav-item">--}}
+{{--                            <a class="nav-link" href="/features">Message Us</a>--}}
+{{--                        </li>--}}
                         <li class="nav-item">
-                            <a class="nav-link" href="/pricing">Pricing</a>
+                            <a class="nav-link" href="{{ route('pricing') }}">Pricing</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/faq">FAQ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/about">About us</a>
+                            <a class="nav-link" href="{{ route('about') }}">About us</a>
                         </li>
                     @endif
 
@@ -92,10 +98,10 @@
                     </li>
                     @else
                         <li class="nav-item" style="margin-right: 5px;">
-                            <a class="btn btn-dark btn-sm" href="/login">Login</a>
+                            <a class="btn btn-dark btn-sm" href="{{ route('login') }}">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-dark btn-sm" href="/signup">Sign Up</a>
+                            <a class="btn btn-dark btn-sm" href="{{ route('register-user') }}">Sign Up</a>
                         </li>
                   @endif
 
