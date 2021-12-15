@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Contactus;
+use App\Mail\Leadgenerate;
 use App\Models\Inventory;
 use App\Models\Metro;
 use App\Models\Order;
@@ -13,6 +15,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use Symfony\Component\HttpFoundation\Response;
 
 class LoginController extends Controller
 {
@@ -80,15 +84,29 @@ class LoginController extends Controller
 
         ]);
 
-        $subscriber = new Subscriber;
+        try {
+            $subscriber = new Subscriber;
 
-        $subscriber->name = $request->name;
-        $subscriber->business = $request->b_name;
-        $subscriber->email = $request->email;
-        $subscriber->phone = $request->phone;
-        $subscriber->save();
+            $subscriber->name = $request->name;
+            $subscriber->business = $request->b_name;
+            $subscriber->email = $request->email;
+            $subscriber->phone = $request->phone;
+            $subscriber->save();
 
-        return back()->with('msg', '<h4>Thank you for subscribe us. We will send you an invitation link to your email.</h4>');
+            $mailData = [
+                'email' => $request->email,
+                'phone' => $request->phone,
+                'nam_e' => $request->name,
+                'business_name' => $request->b_name
+            ];
+
+            $this->sendEmail($mailData);
+            return back()->with('msg', '<h4>Thank you for signing up. We will contact you with the next steps.</h4>');
+        } catch (\Throwable $th) {
+            return back()
+                ->with('err', 'Error! ' . $th->getMessage() . '. Please copy this message and email us at hello@samedaylivery.com');
+        }
+
     }
 
     public function registration()
@@ -176,6 +194,15 @@ class LoginController extends Controller
         $inventory = Inventory::whereProductId($product->id)->where('user_id', '=', Auth::user()->id)->get();
 
         return view('auth.product_info', ['title' => 'Product Info', 'business' => $business, 'metro' => $metro, 'product' => $product, 'orders_past' => $orders_past, 'inventory' => $inventory, 'orders_current' => $orders_current]);
+    }
+
+    private function sendEmail($mailData): void
+    {//Mail::to($email)->send(new Contactus($mailData));
+        Mail::to('hello@samedaylivery.com')->queue(new Leadgenerate($mailData));
+
+        response()->json([
+            'message' => 'Email has been sent.'
+        ], Response::HTTP_OK);
     }
 
 
