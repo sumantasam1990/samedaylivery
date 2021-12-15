@@ -70,7 +70,7 @@
 
 
                         <div class="d-grid mx-auto">
-                            <button type="submit" class="btn btn-dark btn-block">Subscribe</button>
+                            <button type="submit" class="btn btn-dark btn-block">Sign Up</button>
 {{--                            <a class="btn text-dark text-decoration-underline fw-bold mt-3" href="{{ route('login') }}">Already Have An Account? Login</a>--}}
                         </div>
                     </form>

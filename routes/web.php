@@ -15,21 +15,21 @@ Route::get('/how-it-works', [\App\Http\Controllers\PagesController::class, 'how_
 Route::get('/benefits', [\App\Http\Controllers\PagesController::class, 'benefits'])->name('benefits');
 Route::get('/about-us', [\App\Http\Controllers\PagesController::class, 'about'])->name('about');
 Route::get('/pricing', [\App\Http\Controllers\PagesController::class, 'pricing'])->name('pricing');
-Route::get('/terms', [\App\Http\Controllers\PagesController::class, 'terms'])->name('terms');
 Route::get('/faq', [\App\Http\Controllers\PagesController::class, 'faq'])->name('faq');
 Route::get('/faqs/{id}', [\App\Http\Controllers\PagesController::class, 'faqs_info'])->name('faq-info');
 Route::get('/contact', [\App\Http\Controllers\PagesController::class, 'contact'])->name('contact');
 Route::post('contact/us', [\App\Http\Controllers\PagesController::class, 'sendemailToContact'])->name('contact.us');
-Route::get('/subscribe', [\App\Http\Controllers\LoginController::class, 'registration_lead'])->name('subscribe');
+Route::get('/signup', [\App\Http\Controllers\LoginController::class, 'registration_lead'])->name('subscribe');
 Route::post('subscribe/post', [\App\Http\Controllers\LoginController::class, 'customRegistration_lead'])->name('subscribe.post');
-
+Route::get('/terms', [\App\Http\Controllers\PagesController::class, 'terms'])->name('terms');
+Route::get('/privacy', [\App\Http\Controllers\PagesController::class, 'privacy'])->name('privacy');
 
 
 
 // authentications
 Route::get('login', [LoginController::class, 'login'])->name('login');
 Route::post('custom-login', [LoginController::class, 'authenticate'])->name('login.custom');
-Route::get('signup/{token?}', [LoginController::class, 'registration'])->name('register-user');
+Route::get('register/{token?}', [LoginController::class, 'registration'])->name('register-user');
 Route::post('custom-registration', [LoginController::class, 'customRegistration'])->name('register.custom');
 Route::get('signout', [LoginController::class, 'logout'])->name('signout');
 

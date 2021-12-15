@@ -6,7 +6,7 @@
         <div class="col-md-10 mx-auto">
             <div class="text-center mt-4">
                 <h1 class="display-5 fw-bolder">Offer your customers guaranteed 4-hour delivery and same-day delivery in up to 300 metro areas even on weekends and all holidays.</h1>
-                <p class="fw-bold mt-3 fs-6 text-center subheading">Consumers absolutely love and value same day delivery and delivery in hours. Stay ahead of your competition and grow your customer base.</p>
+                <p class="fw-bold mt-3 fs-5 text-center subheading">Consumers absolutely love and value same day delivery and delivery in hours. Stay ahead of your competition and grow your customer base.</p>
                 <a class="btn btn-info btn-lg mt-4" href="{{ route('subscribe') }}">Sign Up Today</a>
                 <p class="mt-3">Week-to- Week. No long term commitment.</p>
             </div>
@@ -78,8 +78,7 @@
         <div class="col-md-1"></div>
         <div class="col-md-5 mb-3">
             <div class="box-black text-center">
-                <h2 class="fw-bold p-4">Same-day
-                    GUARANTEED delivery</h2>
+                <h2 class="fw-bold p-4 text-center">Same-day GUARANTEED delivery</h2>
                 <h4 class="display-4 fw-bold">$250/wk</h4>
                 <p class="fw-bold">Per Metro</p>
                 <div class="m-0">
@@ -87,7 +86,7 @@
                     <p class="m-2 fw-bold fs-6 mb-4">Choose how many metro areas you would like.</p>
                     <p class="m-2 fw-bold fs-6 mb-4">7 days a week delivery, including holidays.</p>
                     <p class="m-2 fw-bold fs-6 mb-4">Unlimited products delivered per month.</p>
-                    <p class="m-2 fw-bold fs-6 mb-4">$1,000 insurance per unit of product.</p>
+                    <p class="m-2 fw-bold fs-6 mb-4">$1 million insurance coverage for all products combined.</p>
                     <p class="m-2 fw-bold fs-6 mb-4">Send unlimited inventory per metro per month.</p>
                     <p class="m-2 fw-bold fs-6 mb-4">Inventory received email alerts.</p>
                     <p class="m-2 fw-bold fs-6 mb-4">Order delivered to customer email alerts.</p>
@@ -107,7 +106,7 @@
                     <p class="m-2 fw-bold fs-6 mb-4">Choose how many metro areas you would like.</p>
                     <p class="m-2 fw-bold fs-6 mb-4">7 days a week delivery, including holidays.</p>
                     <p class="m-2 fw-bold fs-6 mb-4">Unlimited products delivered per month.</p>
-                    <p class="m-2 fw-bold fs-6 mb-4">$1,000 insurance per unit of product.</p>
+                    <p class="m-2 fw-bold fs-6 mb-4">$1 million insurance coverage for all products combined.</p>
                     <p class="m-2 fw-bold fs-6 mb-4">Send unlimited inventory per metro per month.</p>
                     <p class="m-2 fw-bold fs-6 mb-4">Inventory received email alerts.</p>
                     <p class="m-2 fw-bold fs-6 mb-4">Order delivered to customer email alerts.</p>
@@ -216,7 +215,8 @@
         <div class="row">
             <div class="col-md-8 mx-auto text-center">
                 <h4 class="fw-bold display-5">Benefits For Your Business</h4>
-                <p>Start with the metro area where the highest number of your customers are located in and then add more as you get more comfortable with Same Daylivery. Strategically advertise on social media and with influencers in metro areas that you add on Same Daylivery.</p>
+                <p>Learn about the numerous benefits that Same Daylivery can provide your business and your customers.</p>
+
                 <a style="color: #FE2301;" class="btn btn-dark btn-lg fw-bold mt-4" href="{{ route('benefits') }}">The Benefits</a>
             </div>
         </div>
@@ -229,7 +229,7 @@
         <div class="row">
             <div class="col-md-8 mx-auto text-center">
                 <h4 class="fw-bold display-5 text-white">Ease on in with a metro area at a time. Add as many as you need.</h4>
-                <p>Learn about the numerous benefits that Same Daylivery can provide your business and your customers.</p>
+                <p>Start with the metro area where the highest number of your customers are located in and then add more as you get more comfortable with Same Daylivery. Strategically advertise on social media and with influencers in metro areas that you add on Same Daylivery.</p>
 {{--                <a style="color: #FE2301;" class="btn btn-dark btn-lg fw-bold mt-4" href="">The Benefits</a>--}}
             </div>
         </div>

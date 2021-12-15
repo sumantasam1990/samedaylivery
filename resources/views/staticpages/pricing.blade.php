@@ -18,7 +18,7 @@
                             <p class="m-2 fw-bold fs-6 mb-4">Choose how many metro areas you would like.</p>
                             <p class="m-2 fw-bold fs-6 mb-4">7 days a week delivery, including holidays.</p>
                             <p class="m-2 fw-bold fs-6 mb-4">Unlimited products delivered per month.</p>
-                            <p class="m-2 fw-bold fs-6 mb-4">$1,000 insurance per unit of product.</p>
+                            <p class="m-2 fw-bold fs-6 mb-4">$1 million insurance coverage for all products combined.</p>
                             <p class="m-2 fw-bold fs-6 mb-4">Send unlimited inventory per metro per month.</p>
                             <p class="m-2 fw-bold fs-6 mb-4">Inventory received email alerts.</p>
                             <p class="m-2 fw-bold fs-6 mb-4">Order delivered to customer email alerts.</p>
@@ -38,7 +38,7 @@
                             <p class="m-2 fw-bold fs-6 mb-4">Choose how many metro areas you would like.</p>
                             <p class="m-2 fw-bold fs-6 mb-4">7 days a week delivery, including holidays.</p>
                             <p class="m-2 fw-bold fs-6 mb-4">Unlimited products delivered per month.</p>
-                            <p class="m-2 fw-bold fs-6 mb-4">$1,000 insurance per unit of product.</p>
+                            <p class="m-2 fw-bold fs-6 mb-4">$1 million insurance coverage for all products combined.</p>
                             <p class="m-2 fw-bold fs-6 mb-4">Send unlimited inventory per metro per month.</p>
                             <p class="m-2 fw-bold fs-6 mb-4">Inventory received email alerts.</p>
                             <p class="m-2 fw-bold fs-6 mb-4">Order delivered to customer email alerts.</p>

@@ -6,7 +6,7 @@
 
         <link rel="icon" href="{{ asset('images/fav.png') }}">
 
-        <title>{{ $title }} - Samedaylivery</title>
+        <title>{{ $title }} - Same Daylivery</title>
 
         <link rel="stylesheet" href={{ asset('css/app.css') }}>
 

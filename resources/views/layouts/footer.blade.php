@@ -48,9 +48,9 @@
             <div class="col-md-2 col-6">
                 <p class="fw-bold mb-0 mt-4 mt-md-0">Legal</p>
                 <ul>
-{{--                    <li>--}}
-{{--                        <a href="/legal">Privacy</a>--}}
-{{--                    </li>--}}
+                    <li>
+                        <a href="{{ route('privacy') }}">Privacy</a>
+                    </li>
                     <li>
                         <a href="{{ route('terms') }}">Terms</a>
                     </li>

@@ -14,32 +14,37 @@ class PagesController extends Controller
 {
     public function home()
     {
-        return view('staticpages.index', ['title' => 'Welcome to Samedaylivery']);
+        return view('staticpages.index', ['title' => 'Welcome to Same daylivery']);
     }
 
     public function how_it_works()
     {
-        return view('staticpages.howitworks', ['title' => 'How It Works - Samedaylivery']);
+        return view('staticpages.howitworks', ['title' => 'How It Works - Same daylivery']);
     }
 
     public  function benefits()
     {
-        return view('staticpages.benefits', ['title' => 'Benefits - Samedaylivery']);
+        return view('staticpages.benefits', ['title' => 'Benefits - Same daylivery']);
     }
 
     public  function about()
     {
-        return view('staticpages.about', ['title' => 'About Us - Samedaylivery']);
+        return view('staticpages.about', ['title' => 'About Us - Same daylivery']);
     }
 
     public  function pricing()
     {
-        return view('staticpages.pricing', ['title' => 'Pricing - Samedaylivery']);
+        return view('staticpages.pricing', ['title' => 'Pricing - Same daylivery']);
     }
 
     public function terms()
     {
-        return view('staticpages.terms', ['title' => 'Terms & Conditions - Samedaylivery']);
+        return view('staticpages.terms', ['title' => 'Terms & Conditions - Same daylivery']);
+    }
+
+    public function privacy()
+    {
+        return view('staticpages.privacy', ['title' => 'Privacy & Policy - Same daylivery']);
     }
 
     public function faq()
